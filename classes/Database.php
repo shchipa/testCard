@@ -36,7 +36,7 @@ class Database {
             $result_services = mysqli_query($this->db, $sql_services);
             for ($i = 0; $i < mysqli_num_rows($result_services); $i++){
                 $row_services[$i] = mysqli_fetch_assoc($result_services);
-                $row_s["a".$i] = $row_services[$i]["title_service"];
+                $row_s["a".$i] = $row_services[$i]["title_service"];    //создаём одномерный массив из многомерного
             }
 
             $this->data_contract["service"] = $row_s;
