@@ -15,7 +15,7 @@ include 'classes/Database.php';
 
 //$view = $back->get_view($data);
 
-//вернуть $data через json
+//вернуть $data_contr через json
 echo json_encode($data_contr);
 
 ?>
