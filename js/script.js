@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
 
 //валидация ввода символов в форму
-    document.getElementById('id_contract').onkeypress = function(e) {
+    $("#id_contract").keypress(function(e) {
         if (e.ctrlKey || e.altKey || e.metaKey) return;
 
         var chr = getChar(e);
@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
             alert("В поле необходимо вводить только цифры.\nСимвол " + chr + " зарпрещён.");
             return false;
         }
-    };
+    });
 
     function getChar(event) {   //получение символа из keypress
         if (event.which == null) {  // IE
