@@ -17,6 +17,7 @@ class Database {
     }
 
     public function get_data_contract($id_contract){
+        settype($id_contract, 'integer');
         $sql = "SELECT * FROM obj_contracts WHERE id_contract = $id_contract";
         $result = mysqli_query($this->db, $sql);
         if ($result->num_rows === 0){
